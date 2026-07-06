@@ -1,3 +1,4 @@
+/* ===== RESET & BASE STYLES ===== */
 *{
     margin: 0;
     padding: 0;
@@ -5,27 +6,45 @@
     scroll-behavior: smooth;
 }
 
+/* Improved base typography and layout */
 body{
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #282828;
-    color: #c5baaf;
+    background-color: #f8f9fa;
+    color: #333;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Better link styling */
 a{
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
 }
 
+/* Remove default list styles */
 ul li{
     list-style: none;
 }
 
+/* Responsive images */
 img{
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Improved heading styles for better hierarchy */
+h1, h2, h3, h4, h5, h6{
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* Better button baseline */
+button{
+    font-family: inherit;
+    cursor: pointer;
 }
