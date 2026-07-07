@@ -28,6 +28,71 @@
     padding: 0;
 }
 
+.navbar .bars{
+    display: none;
+    font-size: 1.8rem;
+    color: #f46239;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar .bars:hover{
+    color: #d94d24;
+}
+
+/* ===== FULLSCREEN OVERLAY NAVIGATION ===== */
+/* Fullscreen overlay menu that appears on mobile */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-x: hidden;
+    /* Smooth transition animation when opening/closing */
+    transition: width 0.5s ease;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Links inside overlay menu */
+.overlay a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #818181;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for overlay links */
+.overlay a:hover, 
+.overlay a:focus {
+    color: #f46239;
+}
+
+/* Close button styling */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.overlay .closebtn:hover{
+    color: #f46239;
+}
+
 .logo h1{
     font-size: 1.5rem;
     color: #f46239;
@@ -412,6 +477,19 @@
         font-size: 1.3rem;
     }
 
+    /* Hide desktop nav on tablets, show hamburger menu */
+    .nav-links{
+        display: none;
+    }
+
+    .navbar .bars{
+        display: block;
+    }
+
+    .overlay a {
+        font-size: 28px;
+    }
+
     .nav-links li a{
         padding: 10px 12px;
         font-size: 0.9rem;
@@ -466,21 +544,33 @@
         padding: 0;
     }
 
+    .navbar .bars{
+        display: block;
+    }
+
     .logo h1{
         font-size: 1.1rem;
     }
 
     .nav-links{
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        border-top: 1px solid #ddd;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+        display: none;
+    }
+
+    /* ===== RESPONSIVE OVERLAY MENU ===== */
+    /* Show hamburger menu icon on mobile */
+    .navbar .bars{
+        display: block;
+    }
+
+    .overlay a {
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 25px;
     }
 
     .nav-links li a{
