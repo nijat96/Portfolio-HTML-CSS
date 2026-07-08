@@ -9,21 +9,19 @@
     <script src="https://kit.fontawesome.com/b59620e62a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- ===== FULLSCREEN OVERLAY NAVIGATION ===== -->
-    <!-- Fullscreen overlay menu that opens on mobile hamburger click -->
+
     <div id="mobileNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button class="close-btn" onclick="off()">x</button>
         <div class="overlay-content">
-            <a href="#home" onclick="closeNav()">Home</a>
-            <a href="#about" onclick="closeNav()">About</a>
-            <a href="#services" onclick="closeNav()">Services</a>
-            <a href="#portfolio" onclick="closeNav()">Portfolio</a>
-            <a href="#contact" onclick="closeNav()">Contact</a>
+            <a href="#home" onclick="off()">Home</a>
+            <a href="#about" onclick="off()">About</a>
+            <a href="#services" onclick="off()">Services</a>
+            <a href="#portfolio" onclick="off()">Portfolio</a>
+            <a href="#contact" onclick="off()">Contact</a>
         </div>
     </div>
 
-    <!-- ===== NAVIGATION BAR ===== -->
-    <!-- Fixed navigation bar with hamburger menu for mobile -->
+    
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo"><h1>Your Brand</h1></a>
@@ -34,7 +32,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- Hamburger menu icon for mobile - triggers fullscreen overlay -->
-            <div class="bars" onclick="openNav()">
+            <div class="bars" onclick="on()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -140,23 +138,15 @@
         <p>&copy; 2026 Your Company. All rights reserved.</p>
     </footer>
 
-    <!-- ===== JAVASCRIPT FOR OVERLAY NAVIGATION ===== -->
+    
     <script>
-        // Function to open fullscreen overlay navigation menu
-        function openNav() {
-            document.getElementById("mobileNav").style.width = "100%";
+        function on() {
+            document.getElementById("mobileNav").style.display = "flex";
         }
-
-        // Function to close fullscreen overlay navigation menu
-        function closeNav() {
-            document.getElementById("mobileNav").style.width = "0%";
+        
+        function off() {
+            document.getElementById("mobileNav").style.display = "none";
         }
-
-        // Close overlay when clicking on hamburger menu icon (optional enhancement)
-        document.querySelector('.bars').addEventListener('click', function(e) {
-            if (e.target !== this) return;
-            closeNav();
-        });
     </script>
 
 </body>

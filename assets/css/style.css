@@ -40,57 +40,41 @@
     color: #d94d24;
 }
 
-/* ===== FULLSCREEN OVERLAY NAVIGATION ===== */
-/* Fullscreen overlay menu that appears on mobile */
-.overlay {
-    height: 100%;
-    width: 0;
+
+#mobileNav {
     position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    overflow-x: hidden;
-    /* Smooth transition animation when opening/closing */
-    transition: width 0.5s ease;
-}
-
-.overlay-content {
-    position: relative;
-    top: 20%;
+    display: none;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
     width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    top: 0px;
+    background-color: rgb(195, 195, 195);
+    z-index: 1000;
+    color: #000;
 }
-
-/* Links inside overlay menu */
-.overlay a {
-    padding: 15px;
-    text-decoration: none;
-    font-size: 28px;
-    color: #818181;
-    display: block;
-    transition: all 0.3s ease;
+.overlay-content{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
+.close-btn{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    font-size: 30px;
+    border: none;
 
-/* Hover effect for overlay links */
-.overlay a:hover, 
-.overlay a:focus {
-    color: #f46239;
 }
-
-/* Close button styling */
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.overlay .closebtn:hover{
-    color: #f46239;
+.close-btn:hover{
+    background-color: #333;
 }
 
 .logo h1{
